@@ -1,0 +1,473 @@
+/* =======================================
+   1. Сброс Стилей (CSS Reset)
+   ======================================= */
+
+/* Сброс стандартных отступов и размеров */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Удаление списковых маркеров */
+ul {
+    list-style: none;
+}
+
+/* Удаление подчеркивания у ссылок по умолчанию */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =======================================
+   2. Общие Стили Страницы
+   ======================================= */
+
+/* Общий контейнер для сайдбара и основной области */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* =======================================
+   3. Сайдбар (Боковая Панель)
+   ======================================= */
+
+/* Сайдбар */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    padding: 20px;
+}
+
+/* Заголовок в сайдбаре */
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Список учреждений в сайдбаре */
+.institution-list {
+    list-style: none;
+    margin-right: 20px;
+}
+
+/* Элементы списка учреждений */
+.institution-list li {
+    margin-bottom: 10px;
+    
+}
+
+/* Ссылки на учреждения */
+.institution-list li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Стили для ссылок при наведении и активного состояния */
+.institution-list li a:hover,
+.institution-list li a.active {
+    background-color: #575757;
+}
+
+/* =======================================
+   4. Основная Область
+   ======================================= */
+
+/* Основная область */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    
+    margin-left: 252px;
+}
+
+/* Заголовок основной области */
+.main-content h1 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Поле поиска */
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    margin: 0 auto 30px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+/* блоки отделов и сотрудников*/
+.department-block {
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.department-block h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.employee-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Карточки сотрудников */
+.card {
+    background-color: #A88583;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+.card .position {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card .phone, .card .email, .card .cabinet {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* =======================================
+   5. Контейнер Карточек (Directory Container)
+   ======================================= */
+
+/* Контейнер справочника */
+.directory {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* Отделы идут один под другим */
+    gap: 20px;
+    justify-content: center; /* Центрирование карточек по горизонтали */
+    /*align-items: flex-start; /* Выравнивание карточек по верхнему краю */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Центрирование контейнера относительно родительского элемента */
+}
+
+/* =======================================
+   6. Карточки Сотрудников (Employee Cards)
+   ======================================= */
+
+/* Стили для карточек сотрудников */
+
+
+
+/* Убедитесь, что все элементы внутри карточки также имеют выравнивание */
+.name,
+.position,
+.info {
+    text-align: left; /* Выровнять текст по левому краю */
+     /* Задать ширину, чтобы текст занимал всю ширину */
+    margin-bottom: 40px; /* Отступ снизу */
+}
+
+
+/* Эффект при наведении на карточку */
+.card:hover {
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+
+.label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #2A0606;
+    padding: 2px;    
+}
+/* Карточка сотрудника */
+.employee-list {
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr)); /* Сетка карточек сотрудников */
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+}
+.card {
+    position: relative;
+    font-family: 'Montserrat';
+    width: 375px;
+    height: 195px;
+    background: #A88583;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/* Имя и фамилия */
+.card .name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Varduna', sans-serif;
+    color: #2A0606;
+    margin-bottom: 5px;
+}
+
+.name .last-name {
+    display: block;
+    font-size: 1.1em;
+    font-weight: no;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    color: #2A0606;
+    margin-bottom: 5px;
+}
+
+.name .first-patronymic {
+    display: block;
+    max-width: 78%;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #2A0606;
+}
+
+/* Должность */
+.position {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+/* Телефон */
+.card .phone {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+/* Внутренний телефон */
+.phone-number {
+    margin-right: 10px; /* Расстояние между основным телефоном и внутренним */
+}
+.inner-phone-number {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff; /* Цвет для внутреннего телефона */
+    margin-left: 20px; /* Расстояние между иконкой и внутренним номером */
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+/* Email */
+.card .email {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #161515;
+    align-items: center;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.cabinet-container {
+    top: 20px;
+    right: 20px;
+    background: #D0C5C4;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 16px;
+    line-height: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;    /* Размещает элементы (слово "Кабинет" и номер) вертикально */
+    /*align-items: center;       /* Центрирует содержимое по горизонтали */
+    /*justify-content: center;   /* Центрирует содержимое по вертикали */
+    margin-bottom: 10px;       /* Добавляет отступ снизу, чтобы не было слишком близко к другим элементам */
+    font-size: 16px;           /* Задает общий размер шрифта */
+}
+
+.cabinet-label {
+    font-size: 14px;           /* Задает размер шрифта для слова "Кабинет" */
+    font-weight: normal;         /* Делает слово "Кабинет" жирным */
+    text-align: center;
+    color: #2A0606;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Номер кабинета */
+.cabinet-number {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
+    font-weight: bold; 
+    text-align: right;
+    color: #2A0606;
+    z-index: 1; /* Убедитесь, что этот элемент над другими */
+}
+
+/* Иконки перед информацией */
+/*.info::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}*/
+
+
+.name {
+    position: relative;
+    font-weight: 200px;
+    z-index: 2; /* Установите более высокий приоритет для имени */
+}
+/* Иконка телефона */
+.info.phone::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-image: url('icons/phone.png'); /* Убедитесь, что путь корректный */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* Иконка внутреннего телефона */
+.inner-phone-number::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-image: url('icons/inner-phone.png'); /* Иконка для внутреннего телефона */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* =======================================
+   7. Ссылки
+   ======================================= */
+
+/* Стили для ссылок */
+a {
+    color: #2A0606;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =======================================
+   8. Уведомления (Notifications)
+   ======================================= */
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Зеленый для успеха */
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-size: 1em;
+    opacity: 0.95;
+}
+
+/* Красный фон для ошибок */
+.notification.error {
+    background-color: #f44336; /* Красный для ошибок */
+}
+
+/* =======================================
+   9. Адаптивность (Responsive Design)
+   ======================================= */
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+    .directory {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Уменьшение минимальной ширины колонок */
+    }
+
+    .card {
+        max-width: 100%; /* Полная ширина карточки на маленьких экранах */
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .directory {
+        grid-template-columns: 1fr; /* Одноколоночная сетка на мобильных устройствах */
+    }
+
+    .card {
+        width: 100%; /* Ширина карточки адаптируется к ширине экрана */
+    }
+
+    .cabinet-container {
+        font-size: 14px; /* Уменьшение шрифта для кабинета на мобильных экранах */
+    }
+}
+/* Скрыть сайдбар при зуме больше 200% */
+@media screen and (min-resolution: 192dpi), /* Для устройств с высоким разрешением */
+       screen and (min-resolution: 2dppx) { /* Для современных браузеров, поддерживающих zoom */
+    .sidebar {
+        display: none; /* Скрываем сайдбар */
+    }
+
+    /* Основная область растягивается на всю ширину */
+    .main-content {
+        margin-left: 0; /* Убираем отступ слева, который был под сайдбар */
+        width: 100%; /* Занимает всю доступную ширину */
+    }
+}

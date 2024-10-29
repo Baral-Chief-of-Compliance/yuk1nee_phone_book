@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный телефонный справочник</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #e0f7fa; /* голубой фон */
+        }
+        th, td {
+            border: 1px solid #00796b; /* цвет границы */
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #b2ebf2; /* цвет заголовка */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Электронный телефонный справочник</h1>
+    
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Имя" required>
+        <input type="text" id="phone" placeholder="Телефон" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Добавить контакт</button>
+    </form>
+    
+    <h2>Список контактов</h2>
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="contactList"></tbody>
+    </table>
+
+    <script src="script2.js"></script>
+</body>
+</html>
